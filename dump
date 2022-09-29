@@ -1,0 +1,34 @@
+const currentOperand = document.getElementsByClassName('current-operand')
+const previousOperand = document.getElementsByClassName('previous-operand')
+const buttonNumber =  document.querySelectorAll('[data-number]')
+const buttonOperation =  document.querySelectorAll('[data-operation]')
+
+let firstNum = 1
+let secNum = 0
+
+buttonNumber.forEach(button => {
+    button.addEventListener('click', () => {
+        currentOperand[0].innerHTML += button.innerHTML
+    })
+})
+
+buttonOperation.forEach(button => {
+    button.addEventListener('click', () => {
+        previousOperand[0].innerHTML = currentOperand[0].innerHTML
+        if (button === buttonOperation[1]) {
+            firstNum -= previousOperand[0].innerHTML
+            console.log(firstNum)
+            previousOperand[0].innerHTML += ' /'
+        } else if (button === buttonOperation[4]) {
+            previousOperand[0].innerHTML += ' +'
+            firstNum -= previousOperand[0].innerHTML
+            console.log(firstNum)
+        }
+
+        currentOperand[0].innerHTML = ''
+    })
+})
+
+console.log(parseFloat(buttonNumber[0].innerText) + parseFloat(buttonNumber[0].innerText))
+
+

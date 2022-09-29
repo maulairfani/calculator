@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NavBar -->
+    <nav>
+        <div class="header">
+            <img class="math-icon" src="icon_math.png" alt="">
+            <span class="logo">Calculator</span>
+        </div>
+        <div class="header feedback">
+            Give Feedback
+        </div>
+    </nav>
+
+    <!-- Github -->
+    <a href="https://www.google.com">
+        <div class="github"><img src="github.png" alt=""></div>
+    </a>
+
+    <!-- Keseluruhan isi web di bawah Navbar -->
+    <div class="container">
+
+        <!-- Calculator -->
+        <div class="calculator">
+
+            <!-- Bagian Output -->
+            <div class="output">
+                <input type="text" class="operasi" type="text" placeholder="0">
+                <input class="hasil-operasi" type="text" placeholder="0">
+            </div>
+
+            <!-- Tombol-tombol -->
+            <button onclick="allClear()" class="AC">AC</button>
+            <button onclick="del()" class="Del">C</button>
+            <button onclick="percentButton('%')" class="persen">%</button>
+            <button onclick="operationButton('/')" class="bagi">
+                <img class="sign" src="bagi.png">
+            </button>
+            <button onclick="numberButton(7)" class="tujuh">7</button>
+            <button onclick="numberButton(8)" class="delapan">8</button>
+            <button onclick="numberButton(9)" class="sembilan">9</button>
+            <button onclick="operationButton('*')" class="kali">
+                <img class="sign" src="kali.png">
+            </button>
+            <button onclick="numberButton(4)" class="empat">4</button>
+            <button onclick="numberButton(5)" class="lima">5</button>
+            <button onclick="numberButton(6)" class="enam">6</button>
+            <button onclick="operationButton('-')" class="kurang">
+                <img class="sign" src="kurang.png">
+            </button>
+            <button onclick="numberButton(1)" class="satu">1</button>
+            <button onclick="numberButton(2)" class="dua">2</button>
+            <button onclick="numberButton(3)" class="tiga">3</button>
+            <button onclick="operationButton('+')" class="plus">
+                <img class="sign" src="tambah.png">
+            </button>
+            <button onclick="numberButton(0)" class="nol">0</button>
+            <button onclick="numberButton('.')" class="titik">.</button>
+            <button onclick="equals()"  class="sama-dengan">=</button>
+        </div>
+    </div>
+    
+    <!-- Menautkan ke script.js -->
+    <script src="script.js"></script>
+</body>
+</html>
